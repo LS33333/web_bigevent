@@ -67,8 +67,7 @@ $(function() {
                 layer.msg("登陆成功");
                 // 将登录成功之后的字符串保存到：
                 localStorage.setItem('token', res.token);
-                // console.log(res.token);
-                // 登录成功后跳转到后台的首页
+                // // 登录成功后跳转到后台的首页
                 location.href = "/index.html"
             }
         })
