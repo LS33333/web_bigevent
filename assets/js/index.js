@@ -31,17 +31,6 @@ function getUserInfo() {
             }
             // 调用renderAvatar渲染用户的头像
             renderAvatar(res.data);
-        },
-        // 直接输入登陆页面的地址也可以跳转到后台的页面，为解决这个问题，需要登录才跳转到后台，需要用到ajax请求中的complete函数
-        complete: function(res) {
-            // console.log(res);
-            if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
-                // (1)强制清空token
-                localStorage.removeItem("token");
-                // (2)强制跳转页面到登陆页面
-                location.href = "/login.html";
-
-            }
         }
     })
 }
